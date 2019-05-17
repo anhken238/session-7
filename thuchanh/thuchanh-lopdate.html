@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Xây dựng lớp date</title>
+</head>
+
+<body>
+    <script>
+        function Myday(day, month, year) {
+            this.day = day;
+            this.month = month;
+            this.year = year;
+
+            this.getDay = function () {
+                return this.day;
+            }
+            this.getMonth = function () {
+                return this.month;
+            }
+            this.getYear = function () {
+                return this.year
+            }
+
+            this.setDay = function (day) {
+                this.day = day;
+            }
+            this.setMonth = function (month) {
+                this.month = month;
+            }
+            this.setYear = function (year) {
+                this.year = year;
+            }
+        }
+        let date = new Myday(19, 05, 1998);
+        document.write(date.day+"/");
+        document.write(date.month+"/");
+        document.write(date.year);
+        date.setDay(13);
+        date.setMonth(11);
+        date.setYear(1994)
+
+    </script>
+</body>
+
+</html>
