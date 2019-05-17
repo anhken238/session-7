@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Xây dựng lớp date</title>
+</head>
+
+<body>
+    <canvas id="sky" width="500px" height="600px" style="border:1px solid #333333;"></canvas>
+    <script>
+        function Rectangle(width, height) {
+            this.width = width;
+            this.height = height;
+            this.getChuvi = function () {
+                return (width + height) * 2;
+            }
+            this.getDientich = function () {
+                return width * height;
+            }
+            this.vehcn = function () {
+                var canvas = document.getElementById("sky");
+                var ctx = canvas.getContext("2d");
+                ctx.fillRect(10, 10, this.width, this.height);
+                ctx.fillStyle = "#FF0000";
+            }
+        }
+        let width = parseInt(prompt("Nhập Chiều dài "));
+        let height = parseInt(prompt("Nhập chiều rộng : "));
+        let between = new Rectangle(width, height);
+        between.vehcn();
+        let cv = between.getChuvi();
+        let dt = between.getDientich();
+        document.write("chu vi là : " + cv + " Diện tích là : " + dt)
+
+
+    </script>
+</body>
+
+</html>
